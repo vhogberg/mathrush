@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathRush</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="logo-container"><img src="assets/logos/mathrush-logo.png" id="logo" alt="logo"></div>
+
+    </header>
+
+    <main>
+        <section id="menu-view">
+            <h2>Choose a mode:</h2>
+            <div id="math-choice-container">
+                <input type="radio" name="math-choice-radio" id="addition-radio-button">
+                <label for="addition-radio-button">Addition</label>
+
+                <input type="radio" name="math-choice-radio" id="subtraction-radio-button">
+                <label for="subtraction-radio-button">Subtraction</label>
+
+                <input type="radio" name="math-choice-radio" id="multiplication-radio-button">
+                <label for="multiplication-radio-button">Multiplication</label>
+
+                <input type="radio" name="math-choice-radio" id="division-radio-button">
+                <label for="division-radio-button">Division</label>
+            </div>
+            <button id="start-button"><span>Start</span></button>
+        </section>
+
+        <section id="game-view">
+            <div id="question-container">
+                <p id="countdown">1:00</p>
+                <p id="question">Loading...</p>
+            </div>
+            <input type="text" name="answer-field" id="answer-field">
+            <div id="score-container">
+                <button id="submit-answer-button"><span>Submit</span></button>
+                <p id="score">0 correct</p>
+            </div>
+        </section>
+
+        <section id="game-over-view-container">
+            <section id="game-over-view">
+                <h1>🎉</h1>
+                <h4 id="final-score">Loading...</h4>
+                <button id="return-to-menu-button"><span>Return to menu</span></button>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.flaticon.com/free-icons/math" title="math icons">Logo from Flaticon</a>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>
