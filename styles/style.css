@@ -17,6 +17,8 @@
 }
 
 header {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     /* Center logo */
     margin-left: auto;
     margin-right: auto;
