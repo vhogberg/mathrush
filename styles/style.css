@@ -59,7 +59,7 @@ a {
 }
 
 footer {
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 button {
@@ -74,6 +74,10 @@ button span {
     font-size: 16px;
     font-weight: bold;
     color: rgb(53, 53, 53);
+}
+
+button:disabled {
+    cursor:default;
 }
 
 #math-choice-container {

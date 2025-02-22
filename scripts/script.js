@@ -23,11 +23,20 @@ let numberOfAnsweredQuestions = 0;
 
 startButton.addEventListener("click", start);
 submitAnswerButton.addEventListener("click", checkAnswer);
-answerField.addEventListener("keyup", function(event) {
+answerField.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
         checkAnswer();
     }
 })
+
+startButton.disabled = true;
+
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("click", () => {
+        startButton.disabled = false;
+    });
+});
+
 
 // Start function that checks which radio button is toggled
 function start() {
@@ -121,10 +130,10 @@ function startTimer() {
     const interval = setInterval(function () {
         startTime--;
         if (startTime > 9) {
-            countDown.textContent = "0:"+startTime;
+            countDown.textContent = "0:" + startTime;
         }
         else if (startTime <= 9) {
-            countDown.textContent = "0:0"+startTime;
+            countDown.textContent = "0:0" + startTime;
         }
         if (startTime <= 0) {
             clearInterval(interval);
