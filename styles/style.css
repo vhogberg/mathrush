@@ -45,7 +45,8 @@ p {
     color: white;
 }
 
-h2 {
+h3 {
+    font-size: 24px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -183,7 +184,7 @@ input[type="radio"]+label:hover {
     font-size: 40px;
     padding: 0px;
     margin: 0px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* countdown styling */
@@ -252,9 +253,8 @@ input[type="radio"]+label:hover {
 }
 
 #score {
-    color: #222;
+    color: #ffffff;
     font-weight: bold;
-    text-shadow: 2px 2px 2px rgba(156, 156, 156, 0.2);
 }
 
 #score-container {
@@ -298,7 +298,7 @@ input[type="radio"]+label:hover {
     100% { transform: scale(1); opacity: 1; }
 }
 
-h1 {
+h2 {
     font-size: 80px;
     margin: 0;
 }
