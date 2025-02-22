@@ -4,6 +4,7 @@ const submitAnswerButton = document.getElementById("submit-answer-button");
 const menuView = document.getElementById("menu-view");
 const gameView = document.getElementById("game-view");
 const gameOverView = document.getElementById("game-over-view-container");
+const answerField = document.getElementById("answer-field");
 
 //menuView.classList.add("hidden");
 //gameOverView.classList.add("hidden");
@@ -22,6 +23,11 @@ let numberOfAnsweredQuestions = 0;
 
 startButton.addEventListener("click", start);
 submitAnswerButton.addEventListener("click", checkAnswer);
+answerField.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        checkAnswer();
+    }
+})
 
 // Start function that checks which radio button is toggled
 function start() {
@@ -89,12 +95,11 @@ function generateQuestion() {
 
     // Display the question on screen
     document.getElementById("question").textContent = number1 + gameModeSymbol + number2;
-
+    answerField.focus();
 }
 
 // Function to check user answer vs correct answer
 function checkAnswer() {
-    const answerField = document.getElementById("answer-field");
     const userAnswer = answerField.value;
     if (userAnswer == correctAnswer) {
         score++;
@@ -104,7 +109,6 @@ function checkAnswer() {
         numberOfAnsweredQuestions++;
     }
     answerField.value = "";
-    answerField.focus();
     document.getElementById("score").textContent = score + "/" + numberOfAnsweredQuestions + " correct"
     // new questions
     generateQuestion();
@@ -126,7 +130,7 @@ function startTimer() {
             clearInterval(interval);
             gameOver();
         }
-    }, 100); // once every second
+    }, 1000); // once every second
 }
 
 // Function that triggers when timer runs out, game is over
@@ -143,7 +147,7 @@ document.getElementById("return-to-menu-button").addEventListener("click", () =>
     number1 = 0;
     number2 = 0;
     correctAnswer = 0;
-
+    answerField.value = "";
     document.getElementById("score").textContent = "0/0 correct"
 
     menuView.classList.remove("hidden");
